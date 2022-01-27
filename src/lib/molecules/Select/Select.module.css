@@ -1,0 +1,29 @@
+.selectWrapper {
+  position: relative;
+}
+
+.selectArrowWrapper {
+  position: absolute;
+  top: 50%;
+  right: var(--spacing-4);
+  transform: translateY(-50%);
+
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: var(--padding-xxxs);
+  border-radius: var(--radius);
+
+  background: var(--background);
+}
+
+.selectArrow {
+  position: absolute;
+  inset: 50%;
+
+  transform: translate(-50%, -50%) rotate(180deg);
+  width: 0.5rem;
+}
+
+.selectArrow path {
+  fill: var(--text);
+}

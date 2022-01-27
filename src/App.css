@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+main {
+  max-width: 70rem;
+  margin: var(--spacing-10) auto 0;
+  padding: var(--spacing-4);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  margin-bottom: var(--spacing-6);
+
+  display: grid;
+  grid-template-areas: 'heading search add';
+  grid-template-columns: 1fr auto auto;
+  gap: var(--spacing-4);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 30rem) {
+  header {
+    grid-template-areas: 'heading add' 'search  search';
+    grid-template-columns: 1fr auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (max-width: 20rem) {
+  header {
+    grid-template-areas: 'heading' 'add' 'search';
+    grid-template-columns: 1fr;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+header h1 {
+  grid-area: heading;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header .form-item {
+  grid-area: search;
+}
+
+header button {
+  grid-area: add;
+}
+
+section.fallback {
+  display: grid;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-9);
 }

@@ -1,0 +1,66 @@
+.button {
+  display: block;
+
+  /* should probably only have pointer en click event is available */
+  cursor:  pointer;
+
+  border: none;
+  border-radius: var(--radius);
+  background: var(--button-color);
+  padding: var(--spacing-3) var(--spacing-4);
+
+  color: var(--button-text);
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 600;
+
+  transition-property: all;
+  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--transition-duration);
+
+  --button-text: var(--action-secondary-text);
+  --button-color: var(--action-secondary);
+  --button-color-hover: var(--action-secondary-hovered);
+  --button-color-active: var(--action-secondary-pressed);
+  --button-color-disabled: var(--action-secondary-disabled);
+}
+
+.button:hover {
+  --button-color: var(--button-color-hover);
+}
+
+.button:active {
+  --button-color: var(--button-color-active);
+}
+
+.primary {
+  --button-color: var(--action-primary);
+  --button-text: var(--action-primary-text);
+  --button-color-hover: var(--action-primary-hovered);
+  --button-color-active: var(--action-primary-pressed);
+  --button-color-disabled: var(--action-primary-disabled);
+}
+
+.destructive {
+  --button-color: var(--action-destructive);
+  --button-text: var(--action-destructive-text);
+  --button-color-hover: var(--action-destructive-hovered);
+  --button-color-active: var(--action-destructive-pressed);
+  --button-color-disabled: var(--action-destructive-disabled);
+}
+
+.outline {
+  background: transparent;
+  box-shadow: inset 0px 0px 0px 1px var(--button-color);
+  --button-text: var(--text-light);
+}
+
+.outline.primary,
+.outline.destructive {
+  --button-text: var(--button-color);
+}
+
+.fullWidth {
+  width: 100%;
+  text-align: center;
+}

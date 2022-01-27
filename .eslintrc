@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "plugin:@shopify/typescript",
+    "plugin:@shopify/typescript-type-checking",
+    "plugin:@shopify/react",
+    "plugin:@shopify/prettier",
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "rules": {
+    "react/button-has-type": "off",
+    "react/react-in-jsx-scope": "off",
+    "@shopify/jsx-no-hardcoded-content": "off",
+    "jsx-a11y/label-has-for": "off", //deprecated
+    "no-console": "off", //while developing
+  }
+}
